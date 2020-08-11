@@ -15,8 +15,6 @@ export default function App() {
   const [attempts, setAttempts] = useState(0);
 
   const unlock = () => {
-    console.log("attempts", attempts);
-    //
     if (attempts >= 2) {
       setMessage("Too many incorrect attempts");
       setAttempts(attempts + 1);
@@ -47,7 +45,7 @@ export default function App() {
       setPin([...pin, keyPressed]);
     }
   };
-  console.log(attempts);
+
   const keyboardDisabled = attempts === 3;
 
   return (

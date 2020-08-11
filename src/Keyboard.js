@@ -48,8 +48,6 @@ export default function KeyboardComponent(props) {
     window.addEventListener("keydown", handleKeyPress);
 
     return () => {
-      console.log("remove");
-      debugger;
       window.removeEventListener("keydown", handleKeyPress);
     };
   }, [props.onChange]);
